@@ -1,4 +1,7 @@
+import sys
 import streamlit as st
+st.write("Python version:", sys.version)
+
 import pandas as pd
 import joblib
 
@@ -44,4 +47,5 @@ if st.button("Predict Crop"):
     st.success("Top 3 Crop Recommendations:")
     for crop, prob in pairs[:3]:
         st.write(f"**{crop}** → {round(prob * 100, 2)}%")
+
 s
